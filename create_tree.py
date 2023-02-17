@@ -1,6 +1,6 @@
 import pandas as pd
 
-dir_name = "/Users/mateosallesize/Google Drive/SRO/Braids/Supervised/Data/"
+dir_name = "Your dir"
 strands = 3
 length = 10
 depth = 3
