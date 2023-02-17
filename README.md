@@ -5,4 +5,4 @@ Untangling braids with Supervised Learning
   2. Train an MLP NN to predict this single-label multi-class problem (Lara.py)
   3. Use several algorithms to consider the invesrse of the predicted action (Una.py)
 
-
+This work was made by Alexei Lisitsa (University of Liverpool), Alexei Vernitski (University of Essex) and Mateo Salles (University of Essex)
