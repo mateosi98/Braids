@@ -1,8 +1,6 @@
 import sys
 from gym import Env
 
-sys.path.insert(0, '/Users/mateosallesize/Google Drive/SRO/Braids/Supervised/Code')
-
 class BraidEnv(Env):
 
     def __init__(self, initial_braid, strands, length):
