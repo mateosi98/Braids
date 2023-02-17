@@ -4,7 +4,6 @@ import sys
 import pandas as pd
 from ast import literal_eval
 
-sys.path.insert(0, '/Users/mateosallesize/Google Drive/SRO/Braids/Supervised/Code')
 
 def get_braids_labels(strands, length, depth):
     dir_name = "/Users/mateosallesize/Google Drive/SRO/Braids/Supervised/Data/"
