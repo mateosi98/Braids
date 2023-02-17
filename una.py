@@ -1,5 +1,3 @@
-import sys
-sys.path.insert(0, '/Users/mateosallesize/Google Drive/SRO/Braids/Supervised/Code')
 import lara
 from lara import *
 import braid_env
