@@ -4,7 +4,7 @@ import sys
 import pandas as pd
 from ast import literal_eval
 
-sys.path.insert(0, '/Users/mateosallesize/Google Drive/SRO/Braids/Supervised/Code')
+
 
 def get_braids_labels(strands, length, depth):
     dir_name = "/Users/mateosallesize/Google Drive/SRO/Braids/Supervised/Data/"
@@ -60,49 +60,3 @@ def action_lara(lara, braid, ver):
     return lara.predict([braid], verbose=ver)
 
 
-
-# strands = 4
-# length = 6
-# depth = 10
-
-# x_train, y_train, x_test, y_test = get_braids_labels(strands, length, depth)
-# m = create_lara(strands, length)
-# train_lara(m, x_train, y_train, 100)
-# test_lara(m, x_test, y_test)
-# save_lara(m, strands, length, depth, 100)
-# # action_lara(m, [1,0,0,0,0,-1])
-# # np.argmax(m.predict([[1,0,0,0,0,-1]]))
-# # b = np.argmax(m.predict([[1,0,0,0,0,-1]], verbose = 0))
-# m_l = load_lara(strands, length, depth, 100)
-# np.argmax(action_lara(m_l, [1,0,0,0,0,-1], 0))
-
-
-
-
-
-
-
-# # class Lara(tf.keras.Model):
-
-# #     def __init__(self, length, strands):
-# #         super().__init__()
-# #         # self.backend.clear_session()
-# #         # self.models.Sequential([tf.keras.layers.Flatten(), 
-# #         #                             tf.keras.layers.Dense(128, activation=tf.nn.relu), 
-# #         #                             tf.keras.layers.Dense(64, activation=tf.nn.relu), 
-# #         #                             tf.keras.layers.Dense(32, activation=tf.nn.relu), 
-# #         #                             tf.keras.layers.Dense((strands*2+4)*length, activation=tf.nn.softmax)])
-# #         # self.tf.keras.layers.Flatten()
-# #         self.dense1 = tf.keras.layers.Dense(128, activation=tf.nn.relu)
-# #         self.dense2 = tf.keras.layers.Dense(64, activation=tf.nn.relu)
-# #         self.dense3 = tf.keras.layers.Dense(32, activation=tf.nn.relu)
-# #         self.dense4 = tf.keras.layers.Dense((strands*2+4)*length, activation=tf.nn.softmax)
-# #         self.compile(loss='sparse_categorical_crossentropy',optimizer='adam',metrics=['accuracy'])
-    
-# #     def train(self, t_b, t_l, e=10):
-# #         self.fit(t_b, t_l, epochs=e)
-    
-
-# lara = Lara(6,4)
-
-# lara.train(training_braids, training_labels, 50)
