@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0, '/Users/mateosallesize/Google Drive/SRO/Braids/Supervised/Code')
+sys.path.insert(0, 'Your path')
 import una
 import una_l
 import una_b
