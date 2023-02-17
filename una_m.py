@@ -1,5 +1,4 @@
 import sys
-sys.path.insert(0, '/Users/mateosallesize/Google Drive/SRO/Braids/Supervised/Code')
 import lara_l
 from lara_l import *
 import braid_env_l
@@ -100,41 +99,3 @@ def proceed_una(my_lara, x_test, test_denom, strands, length):
         print('UNA_M,\tProgress:\t{:.3f},\tAccuracy:\t{:.3f}'.format(iteration/int(len(x_test)/test_denom),wins/(iteration+1)))
     return wins/(len(x_test)/test_denom), not_untangled
 
-# epoc = 100
-# train_l = False
-
-# my_lara, x_test = initialize(epoc)
-
-# save_lara(my_lara, strands, length, depth, epoc)
-
-# my_lara, x_test = initialize(epoc, train_l)
-
-# x_test_out = load_outside_test(strands, length)
-
-# proceed_una(my_lara, x_test_out, 1, 25)
-
-
-
-
-
-
-# x_train, y_train, x_test, y_test = get_braids_labels(strands, length, depth)
-# m = create_lara(strands, length)
-# train_lara(m, x_train, y_train, 100)
-# test_lara(m, x_test, y_test)
-
-# braid = [1,0,0,0,0,0,0,-1]
-# env = BraidEnv(braid, strands, length)
-# legal = check_legal_actions(env.state)
-# np.where(np.array(legal) == 1)[0]
-# output = action_lara(m, env.state, 0)
-# len(list(output[0]))
-# np.argmax(output)
-# action = np.argmax(np.multiply(legal,output))
-# env.step(action)
-
-# env.close()
-
-# action_lara(m, env.state) // (strands*2+4)
-
-# action_lara(m, env.state) % (strands*2+4)
