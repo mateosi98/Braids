@@ -22,8 +22,8 @@ def create_lara(strands, length):
     tf.keras.backend.clear_session()
     lara = tf.keras.models.Sequential([tf.keras.layers.Flatten(), 
                                     tf.keras.layers.Dense(128, activation=tf.nn.relu), 
-                                    tf.keras.layers.Dense(64, activation=tf.nn.relu), 
-                                    tf.keras.layers.Dense(32, activation=tf.nn.relu), 
+                                    tf.keras.layers.Dense(128, activation=tf.nn.relu), 
+                                    tf.keras.layers.Dense(128, activation=tf.nn.relu), 
                                     tf.keras.layers.Dense((strands*2+4)*length, activation=tf.nn.softmax)])
     lara.compile(loss='sparse_categorical_crossentropy',optimizer='adam',metrics=['accuracy'])
     print('LARA CREATED')
