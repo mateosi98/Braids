@@ -56,34 +56,30 @@ def create_tree(length, strands, depth, father, df_braid_moves):
                     son[position], son[position+1], son[position+2] = son[position+1], son[position], son[position+1]
                     df_braid_moves = new_level(son, position, move, df_braid_moves)
                     create_tree(length, strands, depth-1, son, df_braid_moves)
-                else:
-                    if father[position] == father[position+1]+1:
-                        move = strands*2+1
-                        son = father.copy()
-                        son[position], son[position+1], son[position+2] = son[position+2]+1, son[position], son[position+1]
-                        df_braid_moves = new_level(son, position, move, df_braid_moves)
-                        create_tree(length, strands, depth-1, son, df_braid_moves)
-                    else:
-                        if father[position+1] == father[position+2]+1:
-                            move = strands*2+2
-                            son = father.copy()
-                            son[position], son[position+1], son[position+2] = son[position+1], son[position+2], son[position]-1
-                            df_braid_moves = new_level(son, position, move, df_braid_moves)
-                            create_tree(length, strands, depth-1, son, df_braid_moves)
-                        else:
-                            if father[position+1]+1 == father[position+2]:
-                                move = strands*2+3
-                                son = father.copy()
-                                son[position], son[position+1], son[position+2] = son[position+1], son[position+2], son[position]+1
-                                df_braid_moves = new_level(son, position, move, df_braid_moves)
-                                create_tree(length, strands, depth-1, son, df_braid_moves)
-                            else:
-                                if father[position]+1 == father[position+1]:
-                                    move = strands*2+4
-                                    son = father.copy()
-                                    son[position], son[position+1], son[position+2] = son[position+2]-1, son[position], son[position+1]
-                                    df_braid_moves = new_level(son, position, move, df_braid_moves)
-                                    create_tree(length, strands, depth-1, son, df_braid_moves)
+                elif father[position] == father[position+1]+1:
+                    move = strands*2+1
+                    son = father.copy()
+                    son[position], son[position+1], son[position+2] = son[position+2]+1, son[position], son[position+1]
+                    df_braid_moves = new_level(son, position, move, df_braid_moves)
+                    create_tree(length, strands, depth-1, son, df_braid_moves)
+                elif father[position+1] == father[position+2]+1:
+                    move = strands*2+2
+                    son = father.copy()
+                    son[position], son[position+1], son[position+2] = son[position+1], son[position+2], son[position]-1
+                    df_braid_moves = new_level(son, position, move, df_braid_moves)
+                    create_tree(length, strands, depth-1, son, df_braid_moves)
+                elif father[position+1]+1 == father[position+2]:
+                    move = strands*2+3
+                    son = father.copy()
+                    son[position], son[position+1], son[position+2] = son[position+1], son[position+2], son[position]+1
+                    df_braid_moves = new_level(son, position, move, df_braid_moves)
+                    create_tree(length, strands, depth-1, son, df_braid_moves)
+                elif father[position]+1 == father[position+1]:
+                    move = strands*2+4
+                    son = father.copy()
+                    son[position], son[position+1], son[position+2] = son[position+2]-1, son[position], son[position+1]
+                    df_braid_moves = new_level(son, position, move, df_braid_moves)
+                    create_tree(length, strands, depth-1, son, df_braid_moves)
 
 def reduce_word_in_kei_group(w):
     reduced = True
